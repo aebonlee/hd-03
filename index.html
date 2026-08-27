@@ -730,9 +730,9 @@
     .setup__foot strong { color: var(--danger); }
   </style>
 <!-- === HD:META:BEGIN (자동 생성 — scripts 로 다시 굽습니다) === -->
-<link rel="icon" href="https://aebonlee.github.io/hd-03/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="https://aebonlee.github.io/hd-03/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="https://aebonlee.github.io/hd-03/apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://aebonlee.github.io/hd-03/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -1038,8 +1038,9 @@
     </section>
   </main>
 
+  <script src="lib/supabase.min.js"></script>  <!-- 리포에 동봉 — 폐쇄망에서도 즉시 뜬다 -->
   <script type="module">
-    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+    const { createClient } = window.supabase;  // 위 <script> 가 올려 둔 전역
 
     /* =====================================================================
        ▼▼▼ 여기 두 줄만 본인 값으로 바꾸면 됩니다 ▼▼▼
